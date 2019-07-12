@@ -12,4 +12,6 @@ mysql(修改version 5.1.34)、jpa、web、thymeleaf、devtools、lombok、test
 
 5. 数据库连接配置/druid配置/JPA配置  
 
-6. 测试数据源、创建index页面，访问index页面
+6. 测试数据源、创建index页面，访问index页面  
+
+7. 创建 model类、对应repository
