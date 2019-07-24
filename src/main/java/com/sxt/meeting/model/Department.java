@@ -6,6 +6,7 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * 部门实体类
@@ -33,4 +34,8 @@ public class Department implements Serializable {
      */
     @Column(name = "department_name")
     private String departmentName;
+
+
+    @OneToMany(mappedBy = "department",cascade=CascadeType.ALL,fetch=FetchType.LAZY)
+    private List<Employee> employees;
 }

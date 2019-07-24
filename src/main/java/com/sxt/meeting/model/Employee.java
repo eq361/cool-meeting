@@ -63,7 +63,8 @@ public class Employee implements Serializable {
     /**
      * 会议
      */
-    @OneToMany
+    @ManyToMany
+    @JoinColumn(name = "meeting_id")
     private List<Meeting> meetings;
 
 

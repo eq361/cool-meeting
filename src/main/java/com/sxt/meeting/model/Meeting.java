@@ -52,17 +52,19 @@ public class Meeting implements Serializable {
     @Column
     private String description;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "meeting_room_id")
     private MeetingRoom meetingRoom;
 
 
-    @OneToMany
+    @ManyToMany(mappedBy = "meetings")
     private List<Employee> employees;
 
     /**
      * 预订人
      */
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "reservationist_id")
     private Employee reservationist;
 
     /**
